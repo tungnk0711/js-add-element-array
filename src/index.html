@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<form>
+    <input type="text" id="element" name="element">
+    <button type="button" onclick="add()">Add</button>
+    <button type="button" onclick="display()">Display</button>
+    <br>
+    <hr>
+    <br>
+    <label id="result"></label>
+</form>
+<script>
+    var arr = new Array();
+
+    function add() {
+        var element = document.getElementById('element');
+        arr.push(element.value);
+    }
+
+    function display() {
+        var result = "";
+        for (var index in arr) {
+            result += "Element " + index + " =" + arr[index] + '<br>';
+        }
+        document.getElementById('result').innerHTML = result;
+    }
+</script>
+</body>
+</html>
